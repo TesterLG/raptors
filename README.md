@@ -1,2 +1,2 @@
-# raptors
-A UI auto testing tools.
+# raptor
+this is a test tool.
