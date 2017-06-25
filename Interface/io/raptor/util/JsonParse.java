@@ -1,4 +1,4 @@
-package io.raptor.utilities;
+package io.raptor.util;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,16 +9,17 @@ import java.util.Map;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class JsonPase {// 暂未使用
+//作用是json串转换成键值对,用json格式方便开发,测试调用.
+public class JsonParse {// 暂未使用
 
 	public List<Map<String, Object>> jsonList;
 
 	// 用json.jar开源的方法，使用递归方式将json结果解析成map结果。
-	public JsonPase() {
+	public JsonParse() {
 		jsonList = new ArrayList<Map<String, Object>>();
 	}
 
-	public void Pase(String str, int level, boolean flag) {
+	public void Parse(String str, int level, boolean flag) {
 		if (level == 1) {
 			jsonList.clear();
 		}
@@ -92,13 +93,13 @@ public class JsonPase {// 暂未使用
 									// values = "list"+ value.substring(
 									// value.indexOf("["), value.length());
 									map_value.put(key, value.substring(value.indexOf("[") + 1, value.length() - 1));
-									Pase(value, level + 1, true);
+									Parse(value, level + 1, true);
 								} else {
 									if (value.contains("{")) {
 										// System.out.println("value:" + value);
 										// values = "string[" + value + "]";
 										map_value.put(key, value);
-										Pase(value, level + 1, false);
+										Parse(value, level + 1, false);
 									} else {
 										// System.out.println(key + "--" +
 										// value);
@@ -218,13 +219,13 @@ public class JsonPase {// 暂未使用
 									// System.out.println(key+":" + value);
 									values = "list" + value.substring(value.indexOf("["), value.length());
 									map_value.put(key, values);
-									Pase(value, level + 1, true);
+									Parse(value, level + 1, true);
 								} else {
 									if (value.contains("{")) {
 										// System.out.println("value:" + value);
 										values = "string[" + value + "]";
 										map_value.put(key, values);
-										Pase(value, level + 1, false);
+										Parse(value, level + 1, false);
 									} else {
 										// System.out.println(key + "--" +
 										// value);

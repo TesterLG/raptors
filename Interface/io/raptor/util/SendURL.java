@@ -1,4 +1,4 @@
-package io.raptor.utilities;
+package io.raptor.util;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
@@ -26,7 +26,7 @@ import net.sf.jmimemagic.Magic;
 import net.sf.jmimemagic.MagicMatch;
 
 //http接口请求类
-public class sendURL {
+public class SendURL {
 	// private static ArrayList<List<Map<String, Object>>>[] listret = new
 	// ArrayList[6];
 	private MyX509TrustManager cacert = null;
@@ -34,7 +34,7 @@ public class sendURL {
 	private String exp = "";
 	private boolean addcookie;
 
-	public sendURL() {
+	public SendURL() {
 		//处理HTTPS请求
 		cacert = new MyX509TrustManager();
 	}

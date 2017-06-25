@@ -50,6 +50,7 @@
 	<classpathentry kind="lib" path="UI/libs/xmlbeans-2.3.0.jar"/>
 	<classpathentry kind="lib" path="UI/interface_lib/jmimemagic-0.1.3.jar"/>
 	<classpathentry kind="lib" path="UI/interface_lib/json.jar"/>
+	<classpathentry kind="lib" path="interfaceLib/jxl.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="UI/bin"/>
 </classpath>

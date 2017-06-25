@@ -1,4 +1,4 @@
-package io.raptor.utilities;
+package io.raptor.util;
 
 import java.io.FileInputStream;
 import java.security.KeyStore;
