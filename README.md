@@ -1,2 +1,2 @@
 # raptor
-this is a test tool.
+There are testing tools.
